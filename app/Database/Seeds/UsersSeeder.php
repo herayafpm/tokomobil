@@ -11,14 +11,14 @@ class UsersSeeder extends \CodeIgniter\Database\Seeder
     $initDatas = [
       [
         'user_nama'       => "admin",
-        'user_email'       => "herayafpm@gmail.com",
+        'user_email'       => "admin@test.com",
         'user_username'       => "admin",
         'role_id'       => 1,
         'user_password'       => $password,
       ],
       [
         'user_nama'       => "user",
-        'user_email'       => "heraya71@gmail.com",
+        'user_email'       => "user@test.com",
         'user_username'       => "user",
         'role_id'       => 2,
         'user_password'       => $password,

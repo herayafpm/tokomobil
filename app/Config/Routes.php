@@ -44,8 +44,12 @@ $routes->group('auth', ['namespace' => '\App\Controllers\Api\V1\Auth'], function
 		$routes->post('ubah_password', 'LupaPassword::ubah_password');
 	});
 });
+$routes->group('admin', ['filter' => 'admin', 'namespace' => '\App\Controllers\Api\V1\Admin'], function ($routes) {
+	$routes->resource('transaksi', ['only' => ['index'], 'controller' => 'Transaksi']);
+});
 $routes->group('user', ['filter' => 'user', 'namespace' => '\App\Controllers\Api\V1\User'], function ($routes) {
 	$routes->resource('mobil', ['only' => ['index'], 'controller' => 'Mobil']);
+	$routes->resource('transaksi', ['only' => ['index', 'create'], 'controller' => 'Transaksi']);
 });
 /*
  * --------------------------------------------------------------------
