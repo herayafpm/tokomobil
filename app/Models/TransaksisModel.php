@@ -11,7 +11,7 @@ class TransaksisModel extends Model
 
   protected $returnType     = 'array';
 
-  protected $allowedFields = ['user_id', 'mobil_id', 'transaksi_alamat', 'transaksi_harga', 'transaksi_keterangan', 'transaksi_no_telp'];
+  protected $allowedFields = ['user_id', 'mobil_id', 'transaksi_alamat', 'transaksi_harga', 'transaksi_jumlah', 'transaksi_keterangan', 'transaksi_no_telp'];
 
   protected $useTimestamps = false;
   public function filter($limit, $start, $params = [])

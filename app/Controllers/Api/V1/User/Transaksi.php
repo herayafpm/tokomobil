@@ -49,6 +49,13 @@ class Transaksi extends ResourceController
           'required' => '{field} tidak boleh kosong',
         ]
       ],
+      'transaksi_jumlah' => [
+        'label'  => 'Jumlah',
+        'rules'  => 'required',
+        'errors' => [
+          'required' => '{field} tidak boleh kosong',
+        ]
+      ],
       'transaksi_no_telp' => [
         'label'  => 'No Telepon / WA',
         'rules'  => 'required',
@@ -61,8 +68,9 @@ class Transaksi extends ResourceController
     $data = [
       'mobil_id' => htmlspecialchars($dataJson->mobil_id ?? ''),
       'transaksi_alamat' => htmlspecialchars($dataJson->transaksi_alamat ?? ''),
-      'transaksi_harga' => htmlspecialchars($dataJson->transaksi_harga ?? ''),
       'transaksi_no_telp' => htmlspecialchars($dataJson->transaksi_no_telp ?? ''),
+      'transaksi_harga' => htmlspecialchars($dataJson->transaksi_harga ?? 0),
+      'transaksi_jumlah' => htmlspecialchars($dataJson->transaksi_jumlah ?? 1),
       'transaksi_keterangan' => htmlspecialchars($dataJson->transaksi_keterangan ?? ''),
     ];
     $validation->setRules($rules);

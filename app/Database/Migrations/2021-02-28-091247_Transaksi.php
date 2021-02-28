@@ -38,6 +38,11 @@ class Transaksi extends Migration
 				'constraint'     => 11,
 				'default'				=> 0
 			],
+			'transaksi_jumlah'       => [
+				'type'           => 'INT',
+				'constraint'     => 11,
+				'default'				=> 1
+			],
 			'transaksi_keterangan'       => [
 				'type'           => 'TEXT',
 			],
